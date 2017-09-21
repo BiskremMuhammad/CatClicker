@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Cat Clicker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- a popup model to request pin number from the user to identify the admin -->
+	<div id="pop">
+		<div id="pop-modal">
+			<h1>Insert PIN</h1>
+			<a href="#" id="dismiss">x</a>
+			<form><input type="password" name="pin" id="pin"></form>
+		</div> <!-- /#pop-modal -->
+	</div> <!-- /#pop -->
+
+	<div id="wrapper">
+		<!-- Top section to display the selected item -->
+		<section>
+			<!-- showroom to display the selected item -->
+			<div id="showroom">
+				<h1></h1>
+				<div id="img"><img height="320"></div>
+				<div id="sec-clicks"><h4>Clicks: <span></span></h4></div>
+			</div> <!-- /#showroom -->
+
+			<div id="admin">
+				<h1>Edit</h1>
+				<form>
+					<input type="hidden" id="cat-id" name="cat-id">
+					<div>
+						<div class="labels"><label for="cat-name">Name</label></div>
+						<div><input type="text" name="cat" class="inputs" id="cat-name"></div>
+					</div>
+					<div>
+						<div class="labels"><label for="cat-img">image</label></div>
+						<div><input type="text" name="url" class="inputs" id="cat-img"></div>
+					</div>
+					<div>
+						<div class="labels"><label for="cat-clicks">clicks</label></div>
+						<div><input type="number" name="clicks" class="inputs" id="cat-clicks"></div>
+					</div>
+					<div id="update-btns">
+						<input type="button" id="cancel-edit" name="cancel" value="cancel">
+						<input type="submit" id="submit-edit" name="update" value="update">
+					</div>
+				</form>
+			</div> <!-- /#admin -->
+		</section>
+
+		<!-- The content section -->
+		<div id="content"></div> <!-- automaticaly filled from JavaScript -->
+
+		<div id="footer"><span>Biskrem Muhammad - Cat Clicker 4 Udacity@JavaScript Design Patterns Course</span></div>
+	</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/clicker.js"></script>
+</body>
+</html>
